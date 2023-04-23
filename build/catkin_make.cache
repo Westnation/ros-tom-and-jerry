@@ -1,0 +1,2 @@
+
+-DCATKIN_DEVEL_PREFIX=/home/wester/ros_homework/tom_and_jerry/devel -DCMAKE_INSTALL_PREFIX=/home/wester/ros_homework/tom_and_jerry/install -G Unix Makefiles

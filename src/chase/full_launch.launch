@@ -1,0 +1,9 @@
+<launch>
+    <arg name="chaser_speed" default="0.5" />
+    <param name="chaser_speed_param" value="$(arg chaser_speed)" />
+    <node pkg="turtlesim" type="turtlesim_node" name="jerry" output="screen"/>
+    <node pkg="turtlesim" type="turtle_teleop_key" name="input" output="screen"/>
+    <node pkg="chase" type="chaser.py" name="chaser" output="screen" />
+    <node pkg="rosservice" type="rosservice" name="spawner"
+          args="call --wait /spawn '{x: 1.0,y: 1.0,theta: 0.0,name: tom}'" />
+</launch>
